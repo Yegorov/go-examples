@@ -8,4 +8,6 @@ cd go-examples
 
 go build -o build/main cmd/main.go
 ./build/main
+
+go test -tags=integration -v ./cmd/...
 ```
