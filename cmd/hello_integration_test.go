@@ -12,17 +12,17 @@ import (
 )
 
 func TestMainIntegration(t *testing.T) {
-	main := "./main"
-	buildCmd := exec.Command("go", "build", "-o", main, "main.go")
+	hello := "./hello"
+	buildCmd := exec.Command("go", "build", "-o", hello, "hello.go")
 	if err := buildCmd.Run(); err != nil {
 		t.Fatalf("No compile: %v", err)
 	}
 	defer func() {
-		if err := os.Remove(main); err != nil {
+		if err := os.Remove(hello); err != nil {
 			log.Fatalf("Error in remove binary: %v", err)
 		}
 	}()
-	mainCmd := exec.Command(main)
+	mainCmd := exec.Command(hello)
 	var stdout, stderr bytes.Buffer
 	mainCmd.Stdout = &stdout
 	mainCmd.Stderr = &stderr

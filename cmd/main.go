@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/yegorov/go-examples/internal/lang"
+)
 
 func main() {
-	fmt.Println("Hello world!")
+	fmt.Println("Run")
+	lang.Case(10)
 }
