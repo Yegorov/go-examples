@@ -12,6 +12,11 @@ go build -o build/hello cmd/hello.go
 go run cmd/share/<file>.go
 ```
 
+### Run tests
+```
+go test -v ./...
+```
+
 ### Run integration tests
 ```
 go test -tags=integration -v ./cmd/...
